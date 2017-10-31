@@ -72,13 +72,13 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
         listPosition = info.position;      // Get Index of long-clicked item
         super.onCreateContextMenu(menu, v, menuInfo);
         menu.setHeaderTitle("Veiksmai:");
-        menu.add(0, v.getId(), 1, "Pasalinti");
+        menu.add(0, v.getId(), 1, "Pašalinti");
     }
 
     //Context menu selected item handler
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        if(item.getTitle().equals("Pasalinti")) {   // "Delete" chosen
+        if(item.getTitle().equals("Pašalinti")) {   // "Delete" chosen
             presenter.removeCity(listPosition);     // Remove item from list
             lv.setAdapter(adapter);                 // update info
         } else {
@@ -111,11 +111,11 @@ public class MainActivity extends AppCompatActivity implements MainActivityView 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         input.setHint("Stockholm, Vilnius, Moscow...");
         builder.setMessage("Are you sure?")
-                .setNegativeButton("Atsaukti", dialogClickListener)
-                .setPositiveButton("Prideti", dialogClickListener)
-                .setTitle("Prideti Miesta")
+                .setNegativeButton("Atšaukti", dialogClickListener)
+                .setPositiveButton("Pridėti", dialogClickListener)
+                .setTitle("Pridėti Miestą")
                 .setView(input)
-                .setMessage("Iveskite miesto pavadinima.")
+                .setMessage("Įveskite miesto pavadinimą.")
                 .show();
     }
 

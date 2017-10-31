@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">WeatherApp</string>
-    <string name="prideti_miesta">Prideti Miesta</string>
-    <string name="oru_programele">Oru programele</string>
+    <string name="prideti_miesta">Pridėti Miestą</string>
+    <string name="oru_programele">Orų programėlė</string>
 </resources>
